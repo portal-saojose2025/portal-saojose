@@ -1,26 +1,35 @@
-/* Estilos gerais */
+/* ===== Estilos Gerais ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #e0f0ff; /* fundo azul claro */
-  margin: 0;
-  padding: 0;
   color: #333;
+  line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* ===== Cabeçalho ===== */
 header {
   background-color: #005f99;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 20px 10px;
 }
 
 header h1 {
-  margin: 0;
+  margin-bottom: 10px;
+  font-size: 2em;
 }
 
 nav {
-  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 button {
@@ -28,49 +37,102 @@ button {
   color: white;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
   background-color: #004d73;
+  transform: translateY(-2px);
 }
 
-/* Conteúdo */
+/* ===== Conteúdo ===== */
 main {
-  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
   text-align: center;
 }
 
 .intro {
   margin-bottom: 40px;
+  font-size: 1.2em;
 }
 
-/* Galeria */
+/* ===== Galeria ===== */
 .galeria h2 {
   margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #005f99;
 }
 
 .fotos {
   display: flex;
   justify-content: center;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 .fotos img {
   border-radius: 10px;
   box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Rodapé */
+.fotos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
+}
+
+/* ===== Rodapé ===== */
 footer {
   background-color: #005f99;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 15px 10px;
   margin-top: 30px;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .galeria h2 {
+    font-size: 1.5em;
+  }
+
+  .fotos {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2em;
+  }
+
+  .intro {
+    font-size: 1em;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .fotos img {
+    max-width: 90%;
+  }
 }
