@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Portal Oficial de São José do Gorutuba</title>
   <link rel="icon" href="https://i.ibb.co/x5q5Y7Z/favicon-saojose.png" type="image/png">
-
   <style>
     body { font-family: 'Segoe UI', Tahoma, sans-serif; margin:0; padding:0; background:#f2f2f2; color:#333; }
     header { background:#8B0000; color:white; padding:30px 0; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.3);}
@@ -31,13 +30,51 @@
     .item, .item-video { text-align:center; width:300px; }
     .item img, iframe { border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.2); width:100%; }
 
-    form input, form button { padding:12px; margin:8px 0; width:100%; max-width:400px; border-radius:6px; border:1px solid #ccc; }
+    form input, form textarea, form button { padding:12px; margin:8px 0; width:100%; max-width:400px; border-radius:6px; border:1px solid #ccc; }
+    form textarea { resize: vertical; height:100px; }
     form button { background:#8B0000; color:white; cursor:pointer; font-weight:bold; }
 
     footer { text-align:center; padding:20px; background:#8B0000; color:white; }
+
+    /* ===== Estilos Responsivos ===== */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .galeria {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .item, .item-video {
+        width: 90%;
+      }
+
+      .banner-text h2 {
+        font-size: 1.5em;
+      }
+
+      .banner-text p {
+        font-size: 1em;
+      }
+
+      section {
+        padding: 20px 15px;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      form input, form textarea, form button {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
-
 <body>
 
 <header>
@@ -85,3 +122,46 @@
     </div>
     <div class="item-video">
       <iframe width="300" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo Institucional" frameborder="0" allowfullscreen></iframe>
+      <p>Vídeo Institucional</p>
+    </div>
+  </div>
+</section>
+
+<section id="documentarios">
+  <h2><img src="https://i.ibb.co/QnZ8L4s/icon-historia.png" width="40" /> Documentários</h2>
+  <p>Aqui você encontrará documentários que retratam a história, as festas e a vida da comunidade de São José do Gorutuba.</p>
+  <div class="galeria">
+    <div class="item-video">
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Documentário 1" frameborder="0" allowfullscreen></iframe>
+      <p>Documentário 1</p>
+    </div>
+  </div>
+</section>
+
+<section id="festas">
+  <h2><img src="https://i.ibb.co/QnZ8L4s/icon-historia.png" width="40" /> Festas e Missas</h2>
+  <p>Confira as datas das principais festas e missas na nossa comunidade, além de relatos e fotos de eventos passados.</p>
+</section>
+
+<section id="cadastro">
+  <h2><img src="https://i.ibb.co/QnZ8L4s/icon-historia.png" width="40" /> Cadastro</h2>
+  <form>
+    <input type="text" placeholder="Nome Completo" required>
+    <input type="email" placeholder="E-mail" required>
+    <textarea placeholder="Mensagem ou Comentário"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<section id="doacoes">
+  <h2><img src="https://i.ibb.co/QnZ8L4s/icon-historia.png" width="40" /> Doações</h2>
+  <p>Se deseja colaborar com a restauração da Igreja de São José do Gorutuba, utilize o PIX abaixo:</p>
+  <p><strong>PIX:</strong> 38998891175 (em nome de Derenice)</p>
+</section>
+
+<footer>
+  <p>© 2025 Portal Oficial de São José do Gorutuba. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
