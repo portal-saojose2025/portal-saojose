@@ -1,156 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portal Oficial de São José do Gorutuba</title>
-  <meta name="description" content="História, fé e comunidade de São José do Gorutuba. Fotos, vídeos, orações, festas, livros e dossiês." />
-  <link rel="icon" href="https://i.ibb.co/x5q5Y7Z/favicon-saojose.png" type="image/png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portal São José do Gorutuba</title>
+  <meta name="description" content="Portal Oficial — História, fotos, vídeos, festas, livros e equipe de São José do Gorutuba." />
   <link rel="stylesheet" href="style.css" />
-  <meta property="og:title" content="Portal Oficial de São José do Gorutuba" />
-  <meta property="og:description" content="História, fé e comunidade unidas em um só lugar." />
 </head>
 <body>
-
-<header class="top">
-  <div class="top__inner">
-    <a class="brand" href="#topo">Portal São José do Gorutuba</a>
-    <nav id="nav" class="nav">
-      <a href="#historia">História</a>
-      <a href="#fe">Fé & Orações</a>
-      <a href="#galeria">Fotos</a>
-      <a href="#videos">Vídeos</a>
-      <a href="#festas">Festas</a>
-      <a href="#livros">Livros & Dossiê</a>
-      <a href="#equipe">Equipe</a>
-      <a href="#contato">Contato</a>
-      <a href="#doacoes">Doações</a>
-    </nav>
-    <button class="burger" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
-  </div>
-</header>
-
-<section id="topo" class="hero" aria-label="Banner principal">
-  <!-- Fallback: se você ainda não subiu a imagem banner.jpg, o CSS aplica um fundo degradê bonito -->
-  <img id="heroImg" src="assets/imagens/banner-saojose.jpg" alt="Igreja de São José do Gorutuba" onerror="heroFallback()" loading="eager" />
-  <div class="hero__text">
-    <h1>Bem-vindo ao Portal Oficial</h1>
-    <p>História, fé e comunidade unidas em um só lugar</p>
-    <div class="socials">
-      <a class="social" href="https://www.facebook.com/AMOAJUDAR2015" target="_blank" rel="noopener" title="Facebook">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.4V12h2.4V9.8c0-2.4 1.4-3.7 3.5-3.7 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.5.7-1.5 1.5V12h2.6l-.4 2.9h-2.2v7A10 10 0 0 0 22 12z"/></svg>
-      </a>
-      <a class="social" href="https://www.instagram.com/abel_delson?igsh=MWNzOWlkNGNobDMzZw==" target="_blank" rel="noopener" title="Instagram">
-        <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/></svg>
-      </a>
-      <a class="social" href="https://wa.me/553992071375" target="_blank" rel="noopener" title="WhatsApp (039) 92071-375">
-        <svg viewBox="0 0 24 24"><path d="M20.5 3.5A10 10 0 0 0 3.7 17.8L3 21l3.3-.7A10 10 0 1 0 20.5 3.5zm-8.4 15a8 8 0 0 1-4-1.1l-2.8.6.6-2.7A8 8 0 1 1 12.1 18.5zm4-5c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1c-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1s-1-.3-1.8-1c-.7-.6-1.1-1.3-1.2-1.5-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.3 0-.4c0-.1-.6-1.6-.8-2.1-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.8.4s-1.1 1-1.1 2.4 1.1 2.8 1.3 3 .2.5 2.2 2 3.1 1.2 3.6 1.4c.5.2 1 .2 1.3.1.4-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>
-      </a>
-      <a class="social" href="mailto:tecnicojigabit@gmail.com" title="E-mail principal">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5z"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<main class="container">
-  <div class="dev">🔧 Site em desenvolvimento contínuo — já funcional. Envie material e ajude a completar!</div>
-
-  <section id="historia" class="card">
-    <h2>História de São José do Gorutuba</h2>
-    <p>Município de Porteirinha/MG — Estrada do São José do Gorutuba. Patrimônio público tombado pelo Município de Porteirinha. A comunidade possui dossiê completo e vasta documentação histórica.</p>
-    <p><b>Observação:</b> apesar do nome do lugar ser São José do Gorutuba, a <b>padroeira</b> é <b>Nossa Senhora da Soledade</b>.</p>
-    <div class="map">
-      <iframe title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps?q=Igreja%20de%20S%C3%A3o%20Jos%C3%A9%20do%20Gorutuba%2C%20Porteirinha%20MG&output=embed"></iframe>
-    </div>
-  </section>
-
-  <section id="fe" class="card">
-    <h2>Fé & Orações</h2>
-    <details>
-      <summary><b>Oração a São José</b> (modelo — substitua pelo texto oficial)</summary>
-      <p>Glorioso São José, protetor de nossas famílias e guardião desta comunidade, intercedei por nós. Amém.</p>
-      <audio controls preload="none" src="assets/musicas/oracao-sao-jose.mp3">Seu navegador não suporta áudio.</audio>
-    </details>
-    <details>
-      <summary><b>Novenário / Dossiê (PDF)</b></summary>
-      <p><a class="btn" href="assets/docs/dossie-sjg.pdf" download>Baixar Dossiê</a></p>
-    </details>
-  </section>
-
-  <section id="galeria" class="card">
-    <h2>Galeria de Fotos</h2>
-    <div class="grid" id="gridFotos"><!-- preenchido via JS --></div>
-  </section>
-
-  <section id="videos" class="card">
-    <h2>Vídeos</h2>
-    <p class="muted">Cole aqui o ID do YouTube ou o link do Facebook/Instagram no arquivo <code>script.js</code> (seção <b>VIDEOS</b>). Dois exemplos já prontos.</p>
-    <div class="grid" id="gridVideos"><!-- via JS --></div>
-  </section>
-
-  <section id="festas" class="card">
-    <h2>Festas e Missas</h2>
-    <ul id="listaFestas" class="list"><!-- via JS --></ul>
-  </section>
-
-  <section id="livros" class="card">
-    <h2>Livros, Pesquisas & Dossiês</h2>
-    <ul id="listaLivros" class="list"><!-- via JS --></ul>
-    <h3>Zeladores da Igreja</h3>
-    <ul id="listaZeladores" class="list"><!-- via JS --></ul>
-  </section>
-
-  <section id="equipe" class="card">
-    <h2>Equipe & Administração</h2>
-    <div class="roles" id="roles"><!-- via JS --></div>
-    <form class="mt" action="mailto:tecnicojigabit@gmail.com" method="post" enctype="text/plain">
-      <div class="row">
-        <input name="nome" placeholder="Seu nome" required />
-        <input name="contato" placeholder="WhatsApp / E-mail" required />
+  <header class="top">
+    <div class="top-inner">
+      <div class="brand">Portal São José do Gorutuba</div>
+      <nav id="mainNav" class="nav">
+        <a href="#historia">História</a>
+        <a href="#igrejas">Igrejas</a>
+        <a href="#folias">Folias</a>
+        <a href="#midia">Fotos & Vídeos</a>
+        <a href="#patrocinadores">Patrocinadores</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="actions">
+        <button id="btnDark" class="icon" aria-label="Modo Escuro">🌙</button>
+        <button id="btnMenu" class="icon burger" aria-label="Abrir menu">☰</button>
       </div>
-      <select name="area" id="selectArea"><!-- via JS --></select>
-      <textarea name="mensagem" placeholder="Conte sua experiência"></textarea>
-      <button class="btn">Quero participar da equipe</button>
-    </form>
-    <p class="tip">Dica: também adicione colaboradores no GitHub (Settings → Collaborators) para ajudarem a manter o site.</p>
-  </section>
+    </div>
+  </header>
 
-  <section id="contato" class="card">
-    <h2>Contato</h2>
-    <div class="contact">
-      <a class="chip" href="https://wa.me/553992071375" target="_blank">WhatsApp (039) 92071-375 — Abel</a>
-      <a class="chip" href="tel:+5538998891175">Telefone (038) 99889-1175 — Abel</a>
-      <a class="chip" href="mailto:tecnicojigabit@gmail.com">tecnicojigabit@gmail.com</a>
-      <a class="chip" href="mailto:tecnicojigabit.1832@gmail.com">tecnicojigabit.1832@gmail.com</a>
-      <a class="chip" href="https://chat.whatsapp.com/IiLafMIE4xG4bl28RzvMR6?mode=ems_share_c" target="_blank">Grupo de WhatsApp</a>
-      <a class="chip" href="https://www.facebook.com/AMOAJUDAR2015" target="_blank">Facebook</a>
-      <a class="chip" href="https://www.instagram.com/abel_delson?igsh=MWNzOWlkNGNobDMzZw==" target="_blank">Instagram</a>
+  <!-- HERO -->
+  <section class="hero" id="topo">
+    <img id="heroImg" src="assets/imagens/banner-saojose.jpg" alt="Igreja de São José do Gorutuba" onerror="this.style.display='none';document.querySelector('.hero').classList.add('fallback')" />
+    <div class="hero-text">
+      <h1>Portal Oficial de São José do Gorutuba</h1>
+      <p class="subtitle">História, fé e comunidade — preserve, compartilhe, participe.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/AMOAJUDAR2015" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/abel_delson?igsh=MWNzOWlkNGNobDMzZw==" target="_blank">Instagram</a>
+        <a href="https://chat.whatsapp.com/IiLafMIE4xG4bl28RzvMR6?mode=ems_share_c" target="_blank">Grupo WhatsApp</a>
+      </div>
     </div>
   </section>
 
-  <section id="doacoes" class="card">
-    <h2>Doações</h2>
-    <div class="pix">
-      <div class="pix__item"><b>Felipe Pereira</b> — <span id="pix1">16859749610</span> <button class="btn small" onclick="copyPIX('pix1')">Copiar</button></div>
-      <div class="pix__item"><b>Derenice</b> — <span id="pix2">38988655081</span> <button class="btn small" onclick="copyPIX('pix2')">Copiar</button></div>
-      <div class="pix__item"><b>Abel Pereira</b> — <span id="pix3">38998891175</span> <button class="btn small" onclick="copyPIX('pix3')">Copiar</button></div>
-    </div>
-    <p class="muted">Transparência: publicar relatórios mensais do Tesoureiro em <code>assets/docs/</code>.</p>
-  </section>
-</main>
+  <main class="container">
+    <div class="notice">🔧 Projeto em desenvolvimento — já funcional. Suba fotos e vídeos em <code>assets/imagens</code> e <code>assets/videos</code>.</div>
 
-<footer class="footer">
-  © 2025 Portal Oficial de São José do Gorutuba — Todos os direitos reservados.
-</footer>
+    <!-- HISTÓRIA -->
+    <section id="historia" class="card">
+      <h2>História de São José do Gorutuba</h2>
+      <p>Município de Porteirinha (MG). Patrimônio público tombado. Documentação histórica extensa, dossiê completo e diversos livros e TCCs sobre a região e suas tradições.</p>
+    </section>
 
-<!-- Lightbox -->
-<div class="lightbox" id="lb" onclick="closeLightbox()">
-  <button class="close" aria-label="Fechar">✕</button>
-  <img id="lbimg" alt="" />
-</div>
+    <!-- IGREJAS -->
+    <section id="igrejas" class="card">
+      <h2>Igrejas das Comunidades</h2>
+      <ul class="list">
+        <li>Igreja de Nossa Senhora de Fátima — Comunidade Várzea</li>
+        <li>Igreja de Nossa Senhora Aparecida e Senhor Bom Jesus — Comunidade Fetal de Dezim</li>
+        <li>Igreja de Nossa Senhora da Saúde e Nossa Senhora do Perpétuo Socorro — Comunidade Barra</li>
+        <li>Igreja de Nossa Senhora da Soledade — Comunidade São José do Gorutuba</li>
+      </ul>
+    </section>
 
-<script src="script.js"></script>
+    <!-- FOLIAS -->
+    <section id="folias" class="card">
+      <h2>Folias e Foliões</h2>
+      <p>Tradições das folias de reis e manifestações populares. Aqui você pode colocar vídeos das folias, fotos e relatos.</p>
+      <div class="medias-row">
+        <div class="video-thumb">
+          <video controls preload="metadata" src="assets/videos/folia.mp4" onerror="this.parentElement.style.display='none'">Seu navegador não suporta vídeo.</video>
+          <div class="cap">Folia — exemplo (suba folia.mp4)</div>
+        </div>
+        <div class="video-thumb">
+          <video controls preload="metadata" src="assets/videos/folioes.mp4" onerror="this.parentElement.style.display='none'">Seu navegador não suporta vídeo.</video>
+          <div class="cap">Foliões — exemplo (suba folioes.mp4)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÍDIA (Galeria + Carrossel) -->
+    <section id="midia" class="card">
+      <h2>Fotos & Vídeos</h2>
+
+      <!-- CARROSSEL -->
+      <div class="carousel" id="carousel">
+        <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+        <div class="carousel-track" id="carouselTrack" aria-live="polite"></div>
+        <button class="carousel-btn next" aria-label="Próximo">›</button>
+      </div>
+
+      <!-- GRID -->
+      <h3 style="margin-top:18px">Galeria</h3>
+      <div class="grid" id="gridFotos"></div>
+
+      <h3 style="margin-top:18px">Vídeos</h3>
+      <div class="grid" id="gridVideos"></div>
+    </section>
+
+    <!-- PATROCINADORES / COLABORADORES -->
+    <section id="patrocinadores" class="card">
+      <h2>Patrocinadores & Colaboradores</h2>
+      <div class="sponsors" id="sponsors"></div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section id="equipe" class="card">
+      <h2>Equipe & Administração</h2>
+      <div class="roles" id="roles"></div>
+
+      <h3>Quero Ajudar</h3>
+      <form id="formJoin" onsubmit="joinTeam(event)">
+        <div class="row">
+          <input name="nome" placeholder="Nome completo" required />
+          <input name="contato" placeholder="WhatsApp ou e-mail" required />
+        </div>
+        <select name="area" id="selectArea"></select>
+        <textarea name="mensagem" placeholder="Fale sobre sua experiência (opcional)"></textarea>
+        <button class="btn">Enviar candidatura</button>
+      </form>
+      <p class="muted">Formulário envia por email (se seu dispositivo permitir) ou você pode copiar os dados manualmente.</p>
+    </section>
+
+    <!-- ASSISTENTE -->
+    <section id="assistente" class="card">
+      <h2>Assistente Virtual — Pergunte sobre SJG</h2>
+      <div class="assistant">
+        <input id="assuntoInput" placeholder="Ex.: Quem é Abel Pereira? Como doar? Horário da missa?" />
+        <button class="btn" onclick="perguntarAssistente()">Perguntar</button>
+        <div id="respostaAssistente" class="assistant-answer" aria-live="polite"></div>
+      </div>
+      <p class="muted">Assistente local (FAQ inteligente). Para IA externa (ChatGPT) podemos integrar depois.</p>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="card">
+      <h2>Contato & Doações</h2>
+      <div class="contact-grid">
+        <div><b>Facebook</b><br/><a href="https://www.facebook.com/AMOAJUDAR2015" target="_blank">AMOAJUDAR2015</a></div>
+        <div><b>Instagram</b><br/><a href="https://www.instagram.com/abel_delson?igsh=MWNzOWlkNGNobDMzZw==" target="_blank">@abel_delson</a></div>
+        <div><b>WhatsApp</b><br/><a href="https://wa.me/5538992071375">+55 38 99207-1375 (Abel)</a></div>
+        <div><b>E-mails</b><br/>tecnicojigabit@gmail.com<br/>tecnicojigabit.1832@gmail.com</div>
+      </div>
+      <h3 style="margin-top:12px">PIX</h3>
+      <div class="pixs">
+        <div><b>Felipe Pereira</b><br/><span id="pixA">16859749610</span> <button class="small" onclick="copyPIX('pixA')">Copiar</button></div>
+        <div><b>Derenice</b><br/><span id="pixB">38988655081</span> <button class="small" onclick="copyPIX('pixB')">Copiar</button></div>
+        <div><b>Abel Pereira</b><br/><span id="pixC">38998891175</span> <button class="small" onclick="copyPIX('pixC')">Copiar</button></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>© 2025 Portal São José do Gorutuba — Abel Pereira (pesquisador e historiador)</div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lb" onclick="closeLightbox()">
+    <button class="close" aria-label="Fechar">✕</button>
+    <img id="lbimg" alt="" />
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
