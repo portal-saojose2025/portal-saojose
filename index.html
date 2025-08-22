@@ -1,167 +1,278 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portal Oficial de São José do Gorutuba</title>
-  <link rel="icon" href="https://i.ibb.co/x5q5Y7Z/favicon-saojose.png" type="image/png">
+  <meta name="description" content="História, fé e comunidade de São José do Gorutuba. Fotos, vídeos, orações, festas e documentação histórica." />
+  <link rel="icon" href="https://i.ibb.co/x5q5Y7Z/favicon-saojose.png" type="image/png" />
+  <meta property="og:title" content="Portal Oficial de São José do Gorutuba" />
+  <meta property="og:description" content="História, fé e comunidade unidas em um só lugar." />
+  <meta property="og:image" content="https://i.ibb.co/7vD9yFX/banner-saojose.jpg" />
   <style>
-    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin:0; padding:0; background:#f2f2f2; color:#333; }
-    header { background:#8B0000; color:white; padding:30px 0; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.3);}
-    header h1 { margin:0; font-size:2.2em; }
-
-    .banner { position: relative; text-align: center; color: white; margin-top: 20px; }
-    .banner img { width: 100%; border-radius: 15px; }
-    .banner-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-    .banner-text h2 { font-size: 2em; text-shadow:2px 2px 4px rgba(0,0,0,0.7);}
-    .banner-text p { font-size:1.2em; text-shadow:1px 1px 3px rgba(0,0,0,0.7);}
-
-    nav ul { list-style:none; padding:0; display:flex; justify-content:center; gap:20px; margin-top:15px;}
-    nav ul li a { color:white; text-decoration:none; font-weight:bold; }
-
-    section { padding:40px 20px; max-width:1100px; margin:auto; background:white; margin-bottom:30px; border-radius:15px; box-shadow:0 0 15px rgba(0,0,0,0.1); }
-    h2 { text-align:center; margin-bottom:20px; color:#8B0000; }
-    h2 img { vertical-align:middle; margin-right:10px; }
-    p { line-height:1.6; text-align:justify; }
-
-    .btn { background:#8B0000; color:white; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold; display:inline-block; }
-    .btn:hover { background:#a20000; }
-
-    .galeria { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-    .item, .item-video { text-align:center; width:300px; }
-    .item img, iframe { border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.2); width:100%; }
-
-    form input, form textarea, form button { padding:12px; margin:8px 0; width:100%; max-width:400px; border-radius:6px; border:1px solid #ccc; }
-    form textarea { resize: vertical; height:100px; }
-    form button { background:#8B0000; color:white; cursor:pointer; font-weight:bold; }
-
-    footer { text-align:center; padding:20px; background:#8B0000; color:white; }
-
-    /* ===== Estilos Responsivos ===== */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .galeria {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-      }
-
-      .item, .item-video {
-        width: 90%;
-      }
-
-      .banner-text h2 {
-        font-size: 1.5em;
-      }
-
-      .banner-text p {
-        font-size: 1em;
-      }
-
-      section {
-        padding: 20px 15px;
-      }
-
-      header h1 {
-        font-size: 1.8em;
-      }
-
-      form input, form textarea, form button {
-        max-width: 100%;
-      }
+    :root{
+      --maroon:#8B0000;--maroon-2:#A11414;--gold:#C8A951;
+      --bg:#f6f6f7;--card:#ffffff;--text:#2f2f2f;--muted:#6b6b6b;
+      --radius:16px;--shadow:0 8px 24px rgba(0,0,0,.08)
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit}
+    /* Topo */
+    header{position:sticky;top:0;z-index:50;background:var(--maroon);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+    .topbar{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
+    .brand{font-weight:800;letter-spacing:.2px;line-height:1.1;
+      font-size:clamp(1.1rem,3.2vw,1.5rem)}
+    .nav{display:flex;gap:18px}
+    .nav a{font-weight:700;text-decoration:none;opacity:.95}
+    .nav a:hover{opacity:1;text-decoration:underline}
+    .burger{display:none;background:transparent;border:0;color:#fff;font-size:1.6rem}
+    /* Banner */
+    .hero{position:relative;isolation:isolate}
+    .hero img{width:100%;height:clamp(220px,42vw,420px);object-fit:cover;display:block;filter:saturate(.96)}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.35) 40%,rgba(0,0,0,.15))}
+    .hero .inner{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff;padding:0 18px}
+    .hero h1{margin:0 0 8px 0;font-weight:800;line-height:1.1;
+      font-size:clamp(1.4rem,6vw,2.4rem);text-shadow:0 2px 6px rgba(0,0,0,.5)}
+    .hero p{margin:0;font-weight:600;opacity:.95;font-size:clamp(.95rem,3.3vw,1.1rem)}
+    /* Conteúdo */
+    main{max-width:1100px;margin:auto;padding:18px}
+    section{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;margin:18px 0}
+    section h2{display:flex;align-items:center;gap:10px;color:var(--maroon);font-weight:900;margin:0 0 14px 0;
+      font-size:clamp(1.2rem,4.6vw,1.8rem)}
+    section p{line-height:1.7;font-size:clamp(1rem,3.2vw,1.06rem);text-align:justify}
+    section{scroll-margin-top:90px}
+    .muted{color:var(--muted)}
+    /* Galeria */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+    .card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+    .card figure{margin:0}
+    .card img,.thumb{width:100%;height:200px;object-fit:cover;display:block}
+    .card .cap{padding:10px 12px;font-weight:600}
+    .yt{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+    .yt iframe{position:absolute;inset:0;width:100%;height:100%}
+    /* Formulários & botões */
+    form input,form textarea,form button,select{
+      width:100%;padding:12px 14px;margin:7px 0;border-radius:10px;border:1px solid #ddd;font-size:1rem
+    }
+    form textarea{min-height:110px;resize:vertical}
+    .btn{display:inline-block;background:var(--maroon);color:#fff;border:none;padding:12px 18px;border-radius:12px;font-weight:800;cursor:pointer}
+    .btn:hover{background:var(--maroon-2)}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width:700px){.row{grid-template-columns:1fr}}
+    /* Equipe */
+    .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:900px){.roles{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.roles{grid-template-columns:1fr}}
+    .role{padding:14px;border:1px solid #eee;border-radius:12px;background:#fff}
+    .role b{color:var(--maroon)}
+    /* Aviso dev */
+    .dev{background:#fff3cd;border:1px solid #ffe29b;color:#8a6d3b;padding:10px 14px;border-radius:10px;margin-bottom:10px;font-weight:600}
+    /* Lightbox simples */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;padding:18px;z-index:60}
+    .lightbox img{max-width:100%;max-height:90vh;border-radius:12px}
+    .lightbox.active{display:flex}
+    .close{position:fixed;top:14px;right:14px;background:#fff;border:none;border-radius:999px;width:42px;height:42px;font-size:1.2rem;font-weight:900;cursor:pointer}
+    /* Mobile nav */
+    @media (max-width:860px){
+      .nav{display:none;position:absolute;top:56px;right:12px;background:var(--maroon);padding:12px;border-radius:12px;flex-direction:column;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+      .nav.show{display:flex}
+      .burger{display:inline-block}
     }
   </style>
 </head>
 <body>
-
 <header>
-  <h1>Portal Oficial de São José do Gorutuba</h1>
+  <div class="topbar">
+    <div class="brand">Portal São José do Gorutuba</div>
+    <nav id="nav" class="nav">
+      <a href="#historia">História</a>
+      <a href="#fe">Fé & Orações</a>
+      <a href="#midia">Fotos & Vídeos</a>
+      <a href="#documentarios">Documentários</a>
+      <a href="#festas">Festas e Missas</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#cadastro">Cadastro</a>
+      <a href="#doacoes">Doações</a>
+    </nav>
+    <button class="burger" aria-label="Abrir menu" onclick="document.getElementById('nav').classList.toggle('show')">☰</button>
+  </div>
+</header>
 
-  <div class="banner">
-    <img src="https://i.ibb.co/7vD9yFX/banner-saojose.jpg" alt="Igreja de São José do Gorutuba">
-    <div class="banner-text">
-      <h2>Bem-vindo ao Portal Oficial</h2>
+<section class="hero" aria-label="Banner principal">
+  <img src="https://i.ibb.co/7vD9yFX/banner-saojose.jpg" alt="Igreja de São José do Gorutuba" loading="eager" />
+  <div class="inner">
+    <div>
+      <h1>Bem-vindo ao Portal Oficial</h1>
       <p>História, fé e comunidade unidas em um só lugar</p>
     </div>
   </div>
-
-  <nav>
-    <ul>
-      <li><a href="#historia">História</a></li>
-      <li><a href="#midia">Fotos & Vídeos</a></li>
-      <li><a href="#documentarios">Documentários</a></li>
-      <li><a href="#festas">Festas e Missas</a></li>
-      <li><a href="#cadastro">Cadastro</a></li>
-      <li><a href="#doacoes">Doações</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section id="historia">
-  <h2><img src="https://i.ibb.co/QnZ8L4s/icon-historia.png" width="40" /> História de São José do Gorutuba</h2>
-  <p>São José do Gorutuba é um lugar de fé, tradição e cultura viva. Aqui preservamos memórias, histórias e valores que conectam nossa comunidade desde os primeiros tempos até hoje. Cada foto, vídeo e relato é um pedaço do nosso coração e do nosso passado.</p>
 </section>
 
-<section id="midia">
-  <h2><img src="https://i.ibb.co/5nYzNqG/icon-galeria.png" width="40" /> Galeria de Fotos & Vídeos</h2>
-  <div class="galeria">
-    <div class="item">
-      <img src="https://via.placeholder.com/300x200?text=Igreja+Antiga" alt="Igreja Antiga">
-      <p>Igreja Antiga</p>
+<main>
+  <div class="dev">🔧 Site em desenvolvimento contínuo — já funcional. Envie material e ajude a completar!</div>
+
+  <section id="historia">
+    <h2>História de São José do Gorutuba</h2>
+    <p>São José do Gorutuba é um lugar de fé, tradição e cultura viva. Aqui preservamos memórias, histórias e valores que conectam nossa comunidade desde os primeiros tempos até hoje. Cada foto, vídeo e relato é um pedaço do nosso coração e do nosso passado.</p>
+  </section>
+
+  <section id="fe">
+    <h2>Fé & Orações</h2>
+    <p class="muted">Você pode colocar aqui as orações oficiais, novenas e hinos. Abaixo vai um modelo dobrável:</p>
+    <details>
+      <summary><b>Oração a São José do Gorutuba</b></summary>
+      <p>Coloque aqui o texto completo da oração. Se tiver áudio, adicione:</p>
+      <audio controls preload="none" src="assets/musicas/oracao-sao-jose.mp3">Seu navegador não suporta áudio.</audio>
+    </details>
+    <details>
+      <summary><b>Novenário de São José (PDF)</b></summary>
+      <p><a class="btn" href="assets/docs/novenario-sao-jose.pdf" download>Baixar PDF</a></p>
+    </details>
+  </section>
+
+  <section id="midia">
+    <h2>Galeria de Fotos</h2>
+    <div class="grid" id="galeria">
+      <!-- MODELO de item (duplique e troque a imagem/caption) -->
+      <div class="card">
+        <figure>
+          <img src="assets/imagens/igreja-antiga.jpg" alt="Igreja antiga de São José do Gorutuba" class="thumb" loading="lazy" onclick="openLightbox(this.src,this.alt)" />
+        </figure>
+        <div class="cap">Igreja Antiga</div>
+      </div>
+
+      <div class="card">
+        <figure>
+          <img src="assets/imagens/festa-tradicional.jpg" alt="Festa tradicional na comunidade" class="thumb" loading="lazy" onclick="openLightbox(this.src,this.alt)" />
+        </figure>
+        <div class="cap">Festa Tradicional</div>
+      </div>
+
+      <div class="card">
+        <figure>
+          <img src="assets/imagens/comunidade.jpg" alt="Comunidade reunida" class="thumb" loading="lazy" onclick="openLightbox(this.src,this.alt)" />
+        </figure>
+        <div class="cap">Comunidade</div>
+      </div>
     </div>
-    <div class="item">
-      <img src="https://via.placeholder.com/300x200?text=Festa+Tradicional" alt="Festa Tradicional">
-      <p>Festa Tradicional</p>
+
+    <h2 style="margin-top:24px">Vídeos</h2>
+    <div class="grid">
+      <div class="card yt">
+        <iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo institucional" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
-    <div class="item">
-      <img src="https://via.placeholder.com/300x200?text=Comunidade" alt="Comunidade">
-      <p>Comunidade</p>
+  </section>
+
+  <section id="documentarios">
+    <h2>Documentários</h2>
+    <p>Espaço para documentários e séries sobre a história, as festas e a vida da comunidade.</p>
+    <div class="grid">
+      <div class="card yt">
+        <iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Documentário 1" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
-    <div class="item-video">
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo Institucional" frameborder="0" allowfullscreen></iframe>
-      <p>Vídeo Institucional</p>
+  </section>
+
+  <section id="festas">
+    <h2>Festas e Missas</h2>
+    <div class="row">
+      <div>
+        <p><b>Próximos eventos</b></p>
+        <ul>
+          <li>Set 19 — Missa em honra a São José</li>
+          <li>Out 12 — Festa de Nossa Senhora Aparecida</li>
+        </ul>
+      </div>
+      <form onsubmit="alert('Cadastro de evento enviado! (Este formulário é ilustrativo)');return false;">
+        <p class="muted">Quer incluir um evento? Preencha:</p>
+        <input placeholder="Nome do evento" required />
+        <div class="row">
+          <input type="date" />
+          <input placeholder="Local" />
+        </div>
+        <button class="btn">Enviar</button>
+      </form>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="documentarios">
-  <h2><img src="https://i.ibb.co/QnZ8L4s/icon-historia.png" width="40" /> Documentários</h2>
-  <p>Aqui você encontrará documentários que retratam a história, as festas e a vida da comunidade de São José do Gorutuba.</p>
-  <div class="galeria">
-    <div class="item-video">
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Documentário 1" frameborder="0" allowfullscreen></iframe>
-      <p>Documentário 1</p>
+  <section id="equipe">
+    <h2>Equipe & Administração</h2>
+    <p class="muted">Papéis sugeridos para organização do portal.</p>
+    <div class="roles">
+      <div class="role"><b>ADM Presidente</b><br/>Coordenação geral e visão.</div>
+      <div class="role"><b>ADM Chefe</b><br/>Operações e execução.</div>
+      <div class="role"><b>ADM Gerente</b><br/>Cronograma e qualidade.</div>
+      <div class="role"><b>ADM Fotos</b><br/>Curadoria, crédito e arquivo de imagens.</div>
+      <div class="role"><b>ADM Vídeos</b><br/>Edição, upload e playlists.</div>
+      <div class="role"><b>ADM Literatura</b><br/>Textos, livros e PDFs.</div>
+      <div class="role"><b>ADM Músicas</b><br/>Áudios, corais e hinos.</div>
+      <div class="role"><b>ADM Mensagens</b><br/>Orações e reflexões.</div>
+      <div class="role"><b>ADM Blogs/Conteúdo</b><br/>Postagens e notícias.</div>
+      <div class="role"><b>ADM Tesoureiro</b><br/>Prestação de contas e relatórios.</div>
+      <div class="role"><b>ADM Secretaria</b><br/>Atendimento e documentos.</div>
+      <div class="role"><b>ADM Grupos de Oração</b><br/>Agenda e registros.</div>
+      <div class="role"><b>ADM Ouvidoria</b><br/>Receber sugestões e dúvidas.</div>
+      <div class="role"><b>ADM Web Designer</b><br/>Identidade visual e UX.</div>
     </div>
-  </div>
-</section>
+    <br/>
+    <form action="mailto:tecnicojigabit@gmail.com" method="post" enctype="text/plain">
+      <p class="muted">Quer fazer parte da equipe? Envie seus dados:</p>
+      <div class="row">
+        <input name="nome" placeholder="Seu nome" required />
+        <input name="contato" placeholder="WhatsApp / E-mail" required />
+      </div>
+      <select name="area">
+        <option value="">Selecione a área</option>
+        <option>ADM Presidente</option><option>ADM Chefe</option><option>ADM Gerente</option>
+        <option>ADM Fotos</option><option>ADM Vídeos</option><option>ADM Literatura</option>
+        <option>ADM Músicas</option><option>ADM Mensagens</option><option>ADM Blogs/Conteúdo</option>
+        <option>ADM Tesoureiro</option><option>ADM Secretaria</option><option>ADM Grupos de Oração</option>
+        <option>ADM Ouvidoria</option><option>ADM Web Designer</option>
+      </select>
+      <textarea name="mensagem" placeholder="Fale sobre sua experiência"></textarea>
+      <button class="btn">Quero participar</button>
+    </form>
+    <p class="muted">Dica: você também pode gerenciar a equipe como “Colaboradores” no GitHub (passo a passo abaixo).</p>
+  </section>
 
-<section id="festas">
-  <h2><img src="https://i.ibb.co/QnZ8L4s/icon-historia.png" width="40" /> Festas e Missas</h2>
-  <p>Confira as datas das principais festas e missas na nossa comunidade, além de relatos e fotos de eventos passados.</p>
-</section>
+  <section id="cadastro">
+    <h2>Cadastro / Contato</h2>
+    <form action="mailto:tecnicojigabit@gmail.com" method="post" enctype="text/plain">
+      <input name="nome" type="text" placeholder="Nome Completo" required />
+      <input name="email" type="email" placeholder="E-mail" required />
+      <textarea name="mensagem" placeholder="Mensagem ou Comentário"></textarea>
+      <button class="btn">Enviar</button>
+    </form>
+    <p class="muted">Para formulário com banco de dados, depois podemos ligar a um serviço (ex.: Google Forms / Formspree).</p>
+  </section>
 
-<section id="cadastro">
-  <h2><img src="https://i.ibb.co/QnZ8L4s/icon-historia.png" width="40" /> Cadastro</h2>
-  <form>
-    <input type="text" placeholder="Nome Completo" required>
-    <input type="email" placeholder="E-mail" required>
-    <textarea placeholder="Mensagem ou Comentário"></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-</section>
+  <section id="doacoes">
+    <h2>Doações</h2>
+    <p>Ajude a restauração da Igreja de São José do Gorutuba.</p>
+    <p><b>PIX:</b> <span id="pix">38998891175</span> (em nome de Derenice)
+      &nbsp;<button class="btn" onclick="copyPIX()">Copiar</button></p>
+    <p class="muted">Dúvidas: Abel (38) 99889-1175 • Derenice (38) 98865-5081</p>
+  </section>
+</main>
 
-<section id="doacoes">
-  <h2><img src="https://i.ibb.co/QnZ8L4s/icon-historia.png" width="40" /> Doações</h2>
-  <p>Se deseja colaborar com a restauração da Igreja de São José do Gorutuba, utilize o PIX abaixo:</p>
-  <p><strong>PIX:</strong> 38998891175 (em nome de Derenice)</p>
-</section>
-
-<footer>
-  <p>© 2025 Portal Oficial de São José do Gorutuba. Todos os direitos reservados.</p>
+<footer style="background:var(--maroon);color:#fff;padding:22px;text-align:center">
+  © 2025 Portal Oficial de São José do Gorutuba. Todos os direitos reservados.
 </footer>
 
+<!-- Lightbox -->
+<div class="lightbox" id="lb" onclick="closeLightbox()">
+  <button class="close" aria-label="Fechar">✕</button>
+  <img id="lbimg" alt="" />
+</div>
+
+<script>
+  function openLightbox(src, alt){ const lb=document.getElementById('lb'); const im=document.getElementById('lbimg'); im.src=src; im.alt=alt||''; lb.classList.add('active'); }
+  function closeLightbox(){ document.getElementById('lb').classList.remove('active'); }
+  function copyPIX(){ const t=document.getElementById('pix').textContent.trim(); navigator.clipboard?.writeText(t); alert('PIX copiado: '+t); }
+</script>
 </body>
 </html>
