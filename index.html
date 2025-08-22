@@ -1,165 +1,166 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portal São José do Gorutuba</title>
-  <meta name="description" content="Portal Oficial — História, fotos, vídeos, festas, livros e equipe de São José do Gorutuba." />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal São José do Gorutuba</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top">
-    <div class="top-inner">
-      <div class="brand">Portal São José do Gorutuba</div>
-      <nav id="mainNav" class="nav">
-        <a href="#historia">História</a>
-        <a href="#igrejas">Igrejas</a>
-        <a href="#folias">Folias</a>
-        <a href="#midia">Fotos & Vídeos</a>
-        <a href="#patrocinadores">Patrocinadores</a>
-        <a href="#equipe">Equipe</a>
-        <a href="#contato">Contato</a>
-      </nav>
-      <div class="actions">
-        <button id="btnDark" class="icon" aria-label="Modo Escuro">🌙</button>
-        <button id="btnMenu" class="icon burger" aria-label="Abrir menu">☰</button>
-      </div>
+    <header class="top">
+        <div class="top-inner">
+            <div class="brand">Portal São José do Gorutuba</div>
+            <nav id="mainNav" class="nav">
+                <a href="#historia">História</a>
+                <a href="#igrejas">Igrejas</a>
+                <a href="#folias">Folias</a>
+                <a href="#midia">Fotos & Vídeos</a>
+                <a href="#patrocinadores">Patrocinadores</a>
+                <a href="#equipe">Equipe</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <div class="actions">
+                <button id="btnDark" class="icon" aria-label="Modo Escuro">🌙</button>
+                <button id="btnMenu" class="icon burger" aria-label="Abrir menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="topo">
+        <img id="heroImg" src="" alt="Igreja de São José do Gorutuba" onerror="this.style.display='none';document.querySelector('.hero').classList.add('fallback')">
+        <div class="hero-text">
+            <h1>Portal Oficial de São José do Gorutuba</h1>
+            <p class="subtitle">História, fé e comunidade — preserve, compartilhe, participe.</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/AMOAJUDAR2015" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/abel_delson?igsh=MWNzOWlkNGNobDMzZw==" target="_blank">Instagram</a>
+                <a href="https://chat.whatsapp.com/IiLafMIE4xG4bl28RzvMR6?mode=ems_share_c" target="_blank">Grupo WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="notice">🔧 Projeto em desenvolvimento — já funcional. Suba fotos e vídeos nas pastas <code>/fotos</code> e <code>/videos</code>.</div>
+
+        <!-- HISTÓRIA -->
+        <section id="historia" class="card">
+            <h2>História de São José do Gorutuba</h2>
+            <p>Município de Porteirinha (MG). Patrimônio público tombado. Documentação histórica extensa, dossiê completo e diversos livros e TCCs sobre a região e suas tradições.</p>
+        </section>
+
+        <!-- IGREJAS -->
+        <section id="igrejas" class="card">
+            <h2>Igrejas das Comunidades</h2>
+            <ul class="list">
+                <li>Igreja de Nossa Senhora de Fátima — Comunidade Várzea</li>
+                <li>Igreja de Nossa Senhora Aparecida e Senhor Bom Jesus — Comunidade Fetal de Dezim</li>
+                <li>Igreja de Nossa Senhora da Saúde e Nossa Senhora do Perpétuo Socorro — Comunidade Barra</li>
+                <li>Igreja de Nossa Senhora da Soledade — Comunidade São José do Gorutuba</li>
+            </ul>
+        </section>
+
+        <!-- FOLIAS -->
+        <section id="folias" class="card">
+            <h2>Folias e Foliões</h2>
+            <p>Tradições das folias de reis e manifestações populares. Aqui você pode colocar vídeos das folias, fotos e relatos.</p>
+            <div class="grid" id="foliaVideos"></div>
+        </section>
+
+        <!-- GALERIA -->
+        <section id="midia" class="card">
+            <h2>Fotos & Vídeos</h2>
+            
+            <!-- CARROSSEL -->
+            <div class="carousel" id="carousel">
+                <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+                <div class="carousel-track" id="carouselTrack" aria-live="polite"></div>
+                <button class="carousel-btn next" aria-label="Próximo">›</button>
+            </div>
+
+            <!-- GRID -->
+            <h3>Galeria de Fotos</h3>
+            <div class="grid" id="fotos-container"></div>
+
+            <h3>Galeria de Vídeos</h3>
+            <div class="grid" id="videos-container"></div>
+        </section>
+
+        <!-- PATROCINADORES -->
+        <section id="patrocinadores" class="card">
+            <h2>Patrocinadores & Colaboradores</h2>
+            <div class="sponsors" id="sponsors"></div>
+        </section>
+
+        <!-- EQUIPE -->
+        <section id="equipe" class="card">
+            <h2>Equipe & Administração</h2>
+            <div class="roles" id="roles"></div>
+
+            <h3>Quero Ajudar</h3>
+            <form id="formJoin" onsubmit="joinTeam(event)">
+                <div class="row">
+                    <input name="nome" placeholder="Nome completo" required>
+                    <input name="contato" placeholder="WhatsApp ou e-mail" required>
+                </div>
+                <select name="area" id="selectArea"></select>
+                <textarea name="mensagem" placeholder="Fale sobre sua experiência (opcional)"></textarea>
+                <button class="btn">Enviar candidatura</button>
+            </form>
+            <p class="muted">Formulário envia por email (se seu dispositivo permitir) ou você pode copiar os dados manualmente.</p>
+        </section>
+
+        <!-- ASSISTENTE -->
+        <section id="assistente" class="card">
+            <h2>Assistente Virtual — Pergunte sobre SJG</h2>
+            <div class="row">
+                <input id="assuntoInput" placeholder="Ex.: Quem é Abel Pereira? Como doar? Horário da missa?">
+                <button class="btn" onclick="perguntarAssistente()">Perguntar</button>
+            </div>
+            <div id="respostaAssistente" class="assistant-answer" aria-live="polite"></div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="card">
+            <h2>Contato & Doações</h2>
+            <div class="contact-grid">
+                <div><b>Facebook</b><br><a href="https://www.facebook.com/AMOAJUDAR2015" target="_blank">AMOAJUDAR2015</a></div>
+                <div><b>Instagram</b><br><a href="https://www.instagram.com/abel_delson?igsh=MWNzOWlkNGNobDMzZw==" target="_blank">@abel_delson</a></div>
+                <div><b>WhatsApp</b><br><a href="https://wa.me/5538992071375">+55 38 99207-1375 (Abel)</a></div>
+                <div><b>E-mails</b><br>tecnicojigabit@gmail.com<br>tecnicojigabit.1832@gmail.com</div>
+            </div>
+            
+            <h3>PIX</h3>
+            <div class="pixs">
+                <div class="pix-item">
+                    <b>Felipe Pereira</b><br>
+                    <span id="pixA">16859749610</span> 
+                    <button class="small" onclick="copyPIX('pixA')">Copiar</button>
+                </div>
+                <div class="pix-item">
+                    <b>Derenice</b><br>
+                    <span id="pixB">38988655081</span> 
+                    <button class="small" onclick="copyPIX('pixB')">Copiar</button>
+                </div>
+                <div class="pix-item">
+                    <b>Abel Pereira</b><br>
+                    <span id="pixC">38998891175</span> 
+                    <button class="small" onclick="copyPIX('pixC')">Copiar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>© 2025 Portal São José do Gorutuba — Abel Pereira (pesquisador e historiador)</div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lb" onclick="closeLightbox()">
+        <button class="close" aria-label="Fechar" onclick="closeLightbox()">✕</button>
+        <img id="lbimg" alt="">
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero" id="topo">
-    <img id="heroImg" src="assets/imagens/banner-saojose.jpg" alt="Igreja de São José do Gorutuba" onerror="this.style.display='none';document.querySelector('.hero').classList.add('fallback')" />
-    <div class="hero-text">
-      <h1>Portal Oficial de São José do Gorutuba</h1>
-      <p class="subtitle">História, fé e comunidade — preserve, compartilhe, participe.</p>
-      <div class="socials">
-        <a href="https://www.facebook.com/AMOAJUDAR2015" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/abel_delson?igsh=MWNzOWlkNGNobDMzZw==" target="_blank">Instagram</a>
-        <a href="https://chat.whatsapp.com/IiLafMIE4xG4bl28RzvMR6?mode=ems_share_c" target="_blank">Grupo WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <main class="container">
-    <div class="notice">🔧 Projeto em desenvolvimento — já funcional. Suba fotos e vídeos em <code>assets/imagens</code> e <code>assets/videos</code>.</div>
-
-    <!-- HISTÓRIA -->
-    <section id="historia" class="card">
-      <h2>História de São José do Gorutuba</h2>
-      <p>Município de Porteirinha (MG). Patrimônio público tombado. Documentação histórica extensa, dossiê completo e diversos livros e TCCs sobre a região e suas tradições.</p>
-    </section>
-
-    <!-- IGREJAS -->
-    <section id="igrejas" class="card">
-      <h2>Igrejas das Comunidades</h2>
-      <ul class="list">
-        <li>Igreja de Nossa Senhora de Fátima — Comunidade Várzea</li>
-        <li>Igreja de Nossa Senhora Aparecida e Senhor Bom Jesus — Comunidade Fetal de Dezim</li>
-        <li>Igreja de Nossa Senhora da Saúde e Nossa Senhora do Perpétuo Socorro — Comunidade Barra</li>
-        <li>Igreja de Nossa Senhora da Soledade — Comunidade São José do Gorutuba</li>
-      </ul>
-    </section>
-
-    <!-- FOLIAS -->
-    <section id="folias" class="card">
-      <h2>Folias e Foliões</h2>
-      <p>Tradições das folias de reis e manifestações populares. Aqui você pode colocar vídeos das folias, fotos e relatos.</p>
-      <div class="medias-row">
-        <div class="video-thumb">
-          <video controls preload="metadata" src="assets/videos/folia.mp4" onerror="this.parentElement.style.display='none'">Seu navegador não suporta vídeo.</video>
-          <div class="cap">Folia — exemplo (suba folia.mp4)</div>
-        </div>
-        <div class="video-thumb">
-          <video controls preload="metadata" src="assets/videos/folioes.mp4" onerror="this.parentElement.style.display='none'">Seu navegador não suporta vídeo.</video>
-          <div class="cap">Foliões — exemplo (suba folioes.mp4)</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MÍDIA (Galeria + Carrossel) -->
-    <section id="midia" class="card">
-      <h2>Fotos & Vídeos</h2>
-
-      <!-- CARROSSEL -->
-      <div class="carousel" id="carousel">
-        <button class="carousel-btn prev" aria-label="Anterior">‹</button>
-        <div class="carousel-track" id="carouselTrack" aria-live="polite"></div>
-        <button class="carousel-btn next" aria-label="Próximo">›</button>
-      </div>
-
-      <!-- GRID -->
-      <h3 style="margin-top:18px">Galeria</h3>
-      <div class="grid" id="gridFotos"></div>
-
-      <h3 style="margin-top:18px">Vídeos</h3>
-      <div class="grid" id="gridVideos"></div>
-    </section>
-
-    <!-- PATROCINADORES / COLABORADORES -->
-    <section id="patrocinadores" class="card">
-      <h2>Patrocinadores & Colaboradores</h2>
-      <div class="sponsors" id="sponsors"></div>
-    </section>
-
-    <!-- EQUIPE -->
-    <section id="equipe" class="card">
-      <h2>Equipe & Administração</h2>
-      <div class="roles" id="roles"></div>
-
-      <h3>Quero Ajudar</h3>
-      <form id="formJoin" onsubmit="joinTeam(event)">
-        <div class="row">
-          <input name="nome" placeholder="Nome completo" required />
-          <input name="contato" placeholder="WhatsApp ou e-mail" required />
-        </div>
-        <select name="area" id="selectArea"></select>
-        <textarea name="mensagem" placeholder="Fale sobre sua experiência (opcional)"></textarea>
-        <button class="btn">Enviar candidatura</button>
-      </form>
-      <p class="muted">Formulário envia por email (se seu dispositivo permitir) ou você pode copiar os dados manualmente.</p>
-    </section>
-
-    <!-- ASSISTENTE -->
-    <section id="assistente" class="card">
-      <h2>Assistente Virtual — Pergunte sobre SJG</h2>
-      <div class="assistant">
-        <input id="assuntoInput" placeholder="Ex.: Quem é Abel Pereira? Como doar? Horário da missa?" />
-        <button class="btn" onclick="perguntarAssistente()">Perguntar</button>
-        <div id="respostaAssistente" class="assistant-answer" aria-live="polite"></div>
-      </div>
-      <p class="muted">Assistente local (FAQ inteligente). Para IA externa (ChatGPT) podemos integrar depois.</p>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="card">
-      <h2>Contato & Doações</h2>
-      <div class="contact-grid">
-        <div><b>Facebook</b><br/><a href="https://www.facebook.com/AMOAJUDAR2015" target="_blank">AMOAJUDAR2015</a></div>
-        <div><b>Instagram</b><br/><a href="https://www.instagram.com/abel_delson?igsh=MWNzOWlkNGNobDMzZw==" target="_blank">@abel_delson</a></div>
-        <div><b>WhatsApp</b><br/><a href="https://wa.me/5538992071375">+55 38 99207-1375 (Abel)</a></div>
-        <div><b>E-mails</b><br/>tecnicojigabit@gmail.com<br/>tecnicojigabit.1832@gmail.com</div>
-      </div>
-      <h3 style="margin-top:12px">PIX</h3>
-      <div class="pixs">
-        <div><b>Felipe Pereira</b><br/><span id="pixA">16859749610</span> <button class="small" onclick="copyPIX('pixA')">Copiar</button></div>
-        <div><b>Derenice</b><br/><span id="pixB">38988655081</span> <button class="small" onclick="copyPIX('pixB')">Copiar</button></div>
-        <div><b>Abel Pereira</b><br/><span id="pixC">38998891175</span> <button class="small" onclick="copyPIX('pixC')">Copiar</button></div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div>© 2025 Portal São José do Gorutuba — Abel Pereira (pesquisador e historiador)</div>
-  </footer>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lb" onclick="closeLightbox()">
-    <button class="close" aria-label="Fechar">✕</button>
-    <img id="lbimg" alt="" />
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
