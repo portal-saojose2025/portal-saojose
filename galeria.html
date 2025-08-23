@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria - São José do Gorutuba</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilo específico para galeria */
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
+    .galeria img, .galeria video {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .galeria img:hover, .galeria video:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Galeria de Fotos e Vídeos</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>📸 Fotos</h2>
+      <div id="fotos-container" class="galeria"></div>
+    </section>
+
+    <section>
+      <h2>🎥 Vídeos</h2>
+      <div id="videos-container" class="galeria"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Projeto São José do Gorutuba</p>
+  </footer>
+
+  <script>
+    // ===== Galeria automática =====
+    // Fotos e vídeos são carregados automaticamente das pastas
+    const fotos = [
+      "fotos/foto1.jpg",
+      "fotos/foto2.jpg",
+      "fotos/foto3.jpg"
+      // Adicione todas as imagens aqui
+    ];
+
+    const videos = [
+      "videos/video1.mp4",
+      "videos/video2.mp4"
+      // Adicione todos os vídeos aqui
+    ];
+
+    function carregarGaleria() {
+      const fotosContainer = document.getElementById("fotos-container");
+      const videosContainer = document.getElementById("videos-container");
+
+      // Fotos
+      fotos.forEach(foto => {
+        const img = document.createElement("img");
+        img.src = foto;
+        img.alt = "Foto de São José do Gorutuba";
+        fotosContainer.appendChild(img);
+      });
+
+      // Vídeos
+      videos.forEach(video => {
+        const vid = document.createElement("video");
+        vid.src = video;
+        vid.controls = true;
+        videosContainer.appendChild(vid);
+      });
+    }
+
+    window.onload = carregarGaleria;
+  </script>
+</body>
+</html>
