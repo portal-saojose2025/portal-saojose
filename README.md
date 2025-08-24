@@ -1,3 +1,48 @@
+# Portal São José do Gorutuba
+
+Site estático para GitHub Pages.
+
+## Estrutura
+
+/
+├── index.html
+├── historia.html
+├── folia.html
+├── galeria.html
+├── adm.html
+├── patrocinadores.html
+├── doacoes.html
+├── contato.html
+├── contato.html
+├── css/style.css
+├── js/script.js
+└── assets/
+├── img/
+└── videos/
+
+## Como atualizar fotos e vídeos
+1. Envie as imagens para `assets/img/` e vídeos para `assets/videos/`.
+2. Edite `js/script.js` e ajuste os arrays `SITE_CONFIG.fotos` e `SITE_CONFIG.videos`.
+3. Se quiser listas diferentes por página, edite a constante `PAGE` dentro da página HTML.
+
+## Publicação no GitHub Pages
+- Settings → Pages → Source: `Deploy from a branch`, Branch: `main` (ou `master`), Folder: `/ (root)`.
+- Aguarde 1–2 minutos e acesse `https://SEU-USUARIO.github.io/NOME-REPO/`.
+
+## Acessibilidade e celular
+- Layout responsivo, botões grandes.
+- Modo escuro: botão 🌙 no topo.
+- Menu “☰” abre no celular.
+
+## Suporte rápido
+Se uma imagem não aparecer:
+- Verifique nome exato (minúsculas, sem acento).
+- Caminho deve ser `assets/img/nome.jpg`.
+- Recarregue em aba anônima (cache).
+
+
+
+
 # 📖 Portal São José do Gorutuba
 
 Este repositório contém o código-fonte do site do **Portal São José do Gorutuba**, com páginas sobre história, eventos, galeria, folias, doações, administração, patrocinadores e contato.  
