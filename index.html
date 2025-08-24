@@ -1,57 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal São José do Gorutuba</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Portal São José do Gorutuba — Início</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <header>
-    <h1>Portal São José do Gorutuba</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="contato.html">Contato</a>
-      <a href="#adm">Administração</a>
-      <a href="#patrocinadores">Patrocinadores</a>
-      <a href="#doacoes">Doações</a>
-      <a href="#folia">Folia e Foliões</a>
-    </nav>
+  <header class="top">
+    <div class="top-inner">
+      <div class="brand">Portal São José do Gorutuba</div>
+      <nav id="mainNav" class="nav">
+        <a href="index.html">Início</a>
+        <a href="historia.html">História</a>
+        <a href="folia.html">Folias</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="patrocinadores.html">Patrocinadores</a>
+        <a href="adm.html">Equipe</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="actions">
+        <button id="btnDark" class="icon" aria-label="Modo Escuro">🌙</button>
+        <button id="btnMenu" class="icon burger" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section id="historia">
-      <h2>História</h2>
-      <p>Conteúdo histórico sobre São José do Gorutuba...</p>
+  <section class="hero">
+    <img src="assets/img/banner-saojose.jpg" alt="Igreja de São José do Gorutuba" onerror="this.style.display='none';document.querySelector('.hero').classList.add('fallback')"/>
+    <div class="hero-text">
+      <h1>Portal Oficial de São José do Gorutuba</h1>
+      <p class="subtitle">História, fé e comunidade — preserve, compartilhe, participe.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/AMOAJUDAR2015" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/abel_delson" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5538992071375" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="notice">🔧 Dica: coloque suas fotos em <code>assets/img</code> e vídeos em <code>assets/videos</code>. Atualize os nomes no arquivo <code>js/script.js</code> (ou na constante <code>PAGE</code> desta página).</div>
+
+    <section class="card">
+      <h2>Bem-vindo</h2>
+      <p>Este é o portal oficial de São José do Gorutuba (Porteirinha/MG). Aqui você encontra história, registros fotográficos, folias e a organização comunitária.</p>
     </section>
 
-    <section id="adm">
-      <h2>Administração e Equipes</h2>
-      <ul>
-        <li>Coordenador: João Silva</li>
-        <li>Equipe de apoio: Maria Souza, Pedro Alves</li>
-      </ul>
-    </section>
-
-    <section id="patrocinadores">
-      <h2>Patrocinadores</h2>
-      <p>Apoio cultural e financeiro de diversas empresas e pessoas.</p>
-    </section>
-
-    <section id="doacoes">
-      <h2>Doações</h2>
-      <p>Ajude nossa causa! PIX: <strong>38998891175</strong></p>
-    </section>
-
-    <section id="folia">
-      <h2>Folia e Foliões</h2>
-      <p>Fotos e informações da folia de reis e dos foliões da comunidade.</p>
+    <section class="card" id="midia">
+      <h2>Fotos & Vídeos (destaques)</h2>
+      <div id="fotos-container" class="galeria"></div>
+      <div id="videos-container" class="galeria"></div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Portal São José do Gorutuba</p>
+  <footer class="footer">
+    <div>© 2025 Portal São José do Gorutuba — Abel Pereira (pesquisador e historiador)</div>
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lb" onclick="closeLightbox()">
+    <button class="close" aria-label="Fechar">✕</button>
+    <img id="lbimg" alt="" />
+  </div>
+
+  <!-- Sobrescreva conteúdo desta página se quiser -->
+  <script>
+    const PAGE = {
+      fotos: ["igreja-sjg.jpg","folia1.jpg","comunidade.jpg"], // pode mudar só aqui
+      videos: ["folia.mp4","folioes.mp4"]
+    };
+  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
