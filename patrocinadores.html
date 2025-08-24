@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Patrocinadores — SJG</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">Portal São José do Gorutuba</div>
+    <nav id="mainNav" class="nav">
+      <a href="index.html">Início</a><a href="historia.html">História</a><a href="folia.html">Folias</a>
+      <a href="galeria.html">Galeria</a><a href="patrocinadores.html">Patrocinadores</a>
+      <a href="adm.html">Equipe</a><a href="doacoes.html">Doações</a><a href="contato.html">Contato</a>
+    </nav>
+    <div class="actions"><button id="btnDark" class="icon">🌙</button><button id="btnMenu" class="icon burger">☰</button></div>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="assets/img/comunidade.jpg" alt="Patrocinadores" onerror="this.style.display='none';document.querySelector('.hero').classList.add('fallback')"/>
+  <div class="hero-text"><h1>Patrocinadores & Colaboradores</h1><p class="subtitle">Apoio que fortalece a comunidade.</p></div>
+</section>
+
+<main class="container">
+  <section class="card">
+    <h2>Quem Apoia</h2>
+    <div class="sponsors" id="sponsors"></div>
+  </section>
+
+  <section class="card">
+    <h2>Quero Apoiar</h2>
+    <p>Para se tornar patrocinador oficial, entre em contato via WhatsApp ou e-mail. Podemos incluir sua marca na página e nas divulgações.</p>
+  </section>
+</main>
+
+<footer class="footer"><div>© 2025 Portal São José do Gorutuba</div></footer>
+<div class="lightbox" id="lb" onclick="closeLightbox()"><button class="close">✕</button><img id="lbimg" alt=""/></div>
+
+<script>const PAGE = {};</script>
+<script src="js/script.js"></script>
+</body>
+</html>
 
