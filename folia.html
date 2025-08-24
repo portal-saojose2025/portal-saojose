@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Folias e Foliões — SJG</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">Portal São José do Gorutuba</div>
+    <nav id="mainNav" class="nav">
+      <a href="index.html">Início</a><a href="historia.html">História</a><a href="folia.html">Folias</a>
+      <a href="galeria.html">Galeria</a><a href="patrocinadores.html">Patrocinadores</a>
+      <a href="adm.html">Equipe</a><a href="doacoes.html">Doações</a><a href="contato.html">Contato</a>
+    </nav>
+    <div class="actions"><button id="btnDark" class="icon">🌙</button><button id="btnMenu" class="icon burger">☰</button></div>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="assets/img/folia1.jpg" alt="Folia de Reis" onerror="this.style.display='none';document.querySelector('.hero').classList.add('fallback')"/>
+  <div class="hero-text"><h1>Folias e Foliões</h1><p class="subtitle">Tradição viva, fé em movimento.</p></div>
+</section>
+
+<main class="container">
+  <section class="card">
+    <h2>Sobre as Folias</h2>
+    <p>As folias de reis são manifestações populares de fé e cultura, com cortejos, cantos e visitas às casas. Aqui reunimos vídeos, fotos e relatos das celebrações.</p>
+  </section>
+
+  <section class="card">
+    <h2>Vídeos</h2>
+    <div id="videos-container" class="galeria"></div>
+  </section>
+
+  <section class="card">
+    <h2>Fotos</h2>
+    <div id="fotos-container" class="galeria"></div>
+  </section>
+</main>
+
+<footer class="footer"><div>© 2025 Portal São José do Gorutuba</div></footer>
+<div class="lightbox" id="lb" onclick="closeLightbox()"><button class="close">✕</button><img id="lbimg" alt=""/></div>
+
+<script>
+  const PAGE = {
+    fotos: ["folia1.jpg","comunidade.jpg"],
+    videos: ["folia.mp4","folioes.mp4"]
+  };
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
 
