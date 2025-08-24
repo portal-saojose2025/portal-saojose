@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>História — São José do Gorutuba</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <div class="brand">Portal São José do Gorutuba</div>
+      <nav id="mainNav" class="nav">
+        <a href="index.html">Início</a>
+        <a href="historia.html">História</a>
+        <a href="folia.html">Folias</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="patrocinadores.html">Patrocinadores</a>
+        <a href="adm.html">Equipe</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="actions">
+        <button id="btnDark" class="icon">🌙</button>
+        <button id="btnMenu" class="icon burger">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="assets/img/igreja-sjg.jpg" alt="Igreja de São José do Gorutuba" onerror="this.style.display='none';document.querySelector('.hero').classList.add('fallback')"/>
+    <div class="hero-text">
+      <h1>História</h1>
+      <p class="subtitle">Patrimônio, memória e fé.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="card">
+      <h2>Origem e Patrimônio</h2>
+      <p>São José do Gorutuba, comunidade do município de Porteirinha (MG), possui patrimônio tombado e uma rica documentação histórica reunida por pesquisadores locais. Destacam-se dossiês, livros e TCCs sobre festas religiosas, folias e a igreja local.</p>
+      <ul class="list">
+        <li>Padroeira: Nossa Senhora da Soledade.</li>
+        <li>Igreja: São José do Gorutuba (patrimônio municipal).</li>
+        <li>Comunidades vizinhas: Várzea, Fetal de Dezim, Barra, entre outras.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Igrejas das Comunidades</h2>
+      <ul class="list">
+        <li>NSra de Fátima — Comunidade Várzea</li>
+        <li>NSra Aparecida e Senhor Bom Jesus — Fetal de Dezim</li>
+        <li>NSra da Saúde e NSra do Perpétuo Socorro — Barra</li>
+        <li>NSra da Soledade — São José do Gorutuba</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer"><div>© 2025 Portal São José do Gorutuba</div></footer>
+
+  <div class="lightbox" id="lb" onclick="closeLightbox()">
+    <button class="close">✕</button><img id="lbimg" alt=""/>
+  </div>
+  <script>const PAGE = {};</script>
+  <script src="js/script.js"></script>
+</body>
+</html>
 
